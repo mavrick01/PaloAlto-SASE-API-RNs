@@ -1,0 +1,4 @@
+Name,Compute_Region,SPN,Dual_Tunnel,Tunnel_IP1,Tunnel_IP2,Peer_Type,Local_Peer1,Remote_Peer1,Local_Peer2,Remote_Peer2,Monitor_IP1,Monitor_IP2,BGP_AS,BGP_Local1,BGP_Peer1,BGP_Local2,BGP_Peer2,Static_Route
+Branch-ID-1,Australia Southeast,australia-southeast-blue,TRUE,,,ufqdn,cloud1-1@acme.com,wan1-1@acme.com,cloud2-1@acme.com,wan2-1@acme.com,192.168.201.1,192.168.202.1,,,,,,192.168.1.0/24:192.168.201.0/30:192.168.202.0/30
+Branch-ID-2,Australia Southeast,australia-southeast-blue,FALSE,,,ufqdn,cloud1-2@acme.com,wan1-2@acme.com,cloud2-2@acme.com,wan2-2@acme.com,192.168.201.5,192.168.202.5,,,,,,192.168.1.0/24:192.168.201.4/30:192.168.202.4/30
+Branch-ID-11,Australia Southeast,australia-southeast-blue,TRUE,,,ufqdn,cloud1-11@acme.com,wan1-11@acme.com,cloud2-11@acme.com,wan2-11@acme.com,192.168.199.1,192.168.198.1,65513,192.168.199.254,192.168.199.1,192.168.198.254,192.168.198.1,192.168.11.0/24:192.168.199.0/24:192.168.198.0/24
