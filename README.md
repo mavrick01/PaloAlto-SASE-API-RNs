@@ -11,12 +11,12 @@ config.yaml
   
 **config.yaml layout**
 In the config file you need to define the following:
- 'clientID - You will receive this when you configure a service API account
- 'clientSecret - You will receive this when you configure a service API account
- tenantID - Generally the number that is the name of the email address of the client_id, prefixed with "tsg_id:". With Multi-tenancy, this can be a tenancy deeper in the hierarchy 
- PassiveMode - Defined is if the Prisma Access IPSec is Dynamic (true) or Static (false)
- PSK - The pre-shared key for all IPSec Tunnels. 
- csvFile - The file referenced as <XXXX>.csv above. This is where your configs are defined
+-clientID - You will receive this when you configure a service API account
+-clientSecret - You will receive this when you configure a service API account
+-tenantID - Generally the number that is the name of the email address of the client_id, prefixed with "tsg_id:". With Multi-tenancy, this can be a tenancy deeper in the hierarchy 
+-PassiveMode - Defined is if the Prisma Access IPSec is Dynamic (true) or Static (false)
+-PSK - The pre-shared key for all IPSec Tunnels. 
+-csvFile - The file referenced as <XXXX>.csv above. This is where your configs are defined
   
 **CSV file layout**
 The CSV file must have the all the following columns. They can be blank where relevant
