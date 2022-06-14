@@ -3,17 +3,17 @@
 ## Automatic provisioning of Remote Networks on Palo Alto Networks Prisma Cloud Managed ##
 NOTE: This does require the tenancy to be part of the SASE Portal
 
-This Python3 script can simplifiy the deployment of a Remote Network configurations.
+This Python3 script can simplify the deployment of a Remote Network configurations.
 
 This script requires 2 files 
-config.yaml
-<XXXX>.csv
+* config.yaml
+* <XXXX>.csv
   
 **config.yaml layout**
 In the config file you need to define the following:
   * __clientID__ - You will receive this when you configure a service API account
   * __clientSecret__ - You will receive this when you configure a service API account
-  * __tenantID__ - Generally the number that is the name of the email address of the client_id, prefixed with "tsg_id:". With Multi-tenancy, this can be a tenancy deeper in the hierarchy
+  * __tenantID__ - Generally the number that is the name of the email address of the client_id, prefixed with "_tsg_id:_". With Multi-tenancy, this can be a tenancy deeper in the hierarchy
   * __PassiveMode__ - Defined is if the Prisma Access IPSec is Dynamic (true) or Static (false)          
   * __PSK__ - The pre-shared key for all IPSec Tunnels. 
   * __csvFile__ - The file referenced as <XXXX>.csv above. This is where your configs are defined
@@ -26,8 +26,8 @@ The CSV file must have the all the following columns. They can be blank where re
   * __Dual_Tunnel__ - Set as True to configure the Secondary Tunnel as well
   * __Tunnel_IP1__ - If the Tunnel is static, defined the Static IP address of the Primary Tunnel. Leave blank if Dynamic
   * __Tunnel_IP2__ - If the Tunnel is static, defined the Static IP address of the Secondary Tunnel. Leave blank if Dynamic
-  * __Peer_Type__ - If you define Peers, you need to specify one of the following types: "ipaddr" "keyid" "fqdn" "ufqdn"
-  * __Local_Peer1__ - Primary Local peer parameter. E.g if you select ufqdn it would be something like ipsec@acme.com
+  * __Peer_Type__ - If you define Peers, you need to specify one of the following types: "_ipaddr_" "_keyid_" "_fqdn_" "_ufqdn_"
+  * __Local_Peer1__ - Primary Local peer parameter. E.g if you select _ufqdn_ it would be something like _ipsec@acme.com_
   * __Remote_Peer1__ - Primary Remote peer parameter
   * __Local_Peer2__ - Secondary Local peer parameter
   * __Remote_Peer2__ - Secondary Remote peer parameter
