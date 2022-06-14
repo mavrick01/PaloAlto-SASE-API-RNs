@@ -320,11 +320,22 @@ def load_config():
     client_id = confdict.get("clientID")
     client_secret = confdict.get("clientSecret")
     tenant_id = confdict.get("tenantID")
+    if tenant_id == None:
+        if client_id.find('@') >= 0:
+            tenant_id = "tsg_id:" + client_id.split("@",1)[1].split(".",1)[0]
+            logger.error("Tenant ID not defined derived tenant_id %s from Email")
+        else:
+            logger.error("Tenant ID not defined and Client ID is not an Email")
+            raise SystemExit(1)            
     ike_version = confdict.get("IKEversion")
     passive_mode = confdict.get("PassiveMode")
+    if passive_mode == None:
+        passive_mode = False
+    elif passive_mode != True:
+        passive_mode = False
     shared_key = confdict.get("PSK")
     csv_file = confdict.get("csvFile")
-    if client_id == None or client_secret == None or tenant_id == None:
+    if client_id == None or client_secret == None:
         logger.error("Missing required parameter. Current parameters are")
         logger.error("client_id: %s", client_id)
         logger.error("client_secret: %s", client_secret)

@@ -13,8 +13,8 @@ This script requires 2 files:
 In the config file you need to define the following:
   * __clientID__ - You will receive this when you configure a service API account
   * __clientSecret__ - You will receive this when you configure a service API account
-  * __tenantID__ - Generally the number that is the name of the email address of the client_id, prefixed with "_tsg_id:_". With Multi-tenancy, this can be a tenancy deeper in the hierarchy
-  * __PassiveMode__ - Defined is if the Prisma Access IPSec is Dynamic (true) or Static (false)          
+  * __tenantID__ - (Optional) IF the client ID is an email address and is not defined, it will extract the Tenant ID from the client ID. With Multi-tenancy, this can be a tenancy deeper in the hierarchy (you must prefix the tenancy number with "tsg_id:"
+  * __PassiveMode__ - (Optional) Defined is if the Prisma Access IPSec tunnels are passive . If not defined default is they are not set to Passive Mode 
   * __PSK__ - The pre-shared key for all IPSec Tunnels. 
   * __csvFile__ - The file referenced as <XXXX>.csv above. This is where your configs are defined
   

@@ -1,7 +1,7 @@
 ---
  # Make changes as needed and rename the file to config.yaml
  # IKEversion can be 1, 2. Any other number e.g. 0 allows both and prefers version 2
- #
+ # Teannt_ID is optional and is derived from Client_ID if not defined
  clientID: "api@1234567890.iam.panserviceaccount.com"
  clientSecret: "12345678-abcd-1234-1234-123456789abc"
  tenantID: "tsg_id:1234567890"
