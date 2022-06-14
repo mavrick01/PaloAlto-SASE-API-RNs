@@ -5,9 +5,9 @@ NOTE: This does require the tenancy to be part of the SASE Portal
 
 This Python3 script can simplify the deployment of a Remote Network configurations.
 
-This script requires 2 files 
+This script requires 2 files: 
 * config.yaml
-* <XXXX>.csv
+* _XXXX_.csv
   
 **config.yaml layout**
 In the config file you need to define the following:
