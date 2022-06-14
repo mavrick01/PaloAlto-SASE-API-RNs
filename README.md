@@ -38,4 +38,4 @@ The CSV file must have the all the following columns. They can be blank where re
   * __BGP_Peer1__ - If defined, Primary BGP Peer IP Address
   * __BGP_Local2__ - If defiend will provision the Secondary BGP Local IP
   * __BGP_Peer2__ - If defined, Secondary BGP Peer IP Address (currently needs intervention to select the flag in the portal)
-  * __Static_Route__ - Define a list of IP NetMasks for Static routes. Multiple addresses can be added with the delimeter of : between then. e.g. 192.168.1.0/24:192.168.2.0/24
+  * __Static_Route__ - Define a list of IP NetMasks for Static routes. Multiple addresses can be added with the delimeter of __:__ between them e.g. _192.168.1.0/24:192.168.2.0/24_
