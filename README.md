@@ -11,32 +11,31 @@ config.yaml
   
 **config.yaml layout**
 In the config file you need to define the following:
-  * clientID - You will receive this when you configure a service API account
-  * clientSecret - You will receive this when you configure a service API account
-  * tenantID - Generally the number that is the name of the email address of the client_id, prefixed with "tsg_id:". With Multi-tenancy, this can be a tenancy deeper in the hierarchy
-  * PassiveMode - Defined is if the Prisma Access IPSec is Dynamic (true) or Static (false)          
-  * PSK - The pre-shared key for all IPSec Tunnels. 
-  * csvFile - The file referenced as <XXXX>.csv above. This is where your configs are defined
+  * __clientID__ - You will receive this when you configure a service API account
+  * __clientSecret__ - You will receive this when you configure a service API account
+  * __tenantID__ - Generally the number that is the name of the email address of the client_id, prefixed with "tsg_id:". With Multi-tenancy, this can be a tenancy deeper in the hierarchy
+  * __PassiveMode__ - Defined is if the Prisma Access IPSec is Dynamic (true) or Static (false)          
+  * __PSK__ - The pre-shared key for all IPSec Tunnels. 
+  * __csvFile__ - The file referenced as <XXXX>.csv above. This is where your configs are defined
   
 **CSV file layout**
 The CSV file must have the all the following columns. They can be blank where relevant
-  Name - Remote Network Name
-  Compute_Region - Name of the Compute Region as stated in the Portal page
-  SPN - name of the Security Processing Node for the site. Bandwidth must be allocated to the Compute Region before provisoning
-  Dual_Tunnel - Set as True to configure the Secondary Tunnel as well
-  Tunnel_IP1 - If the Tunnel is static, defined the Static IP address of the Primary Tunnel. Leave blank if Dynamic
-  Tunnel_IP2 - If the Tunnel is static, defined the Static IP address of the Secondary Tunnel. Leave blank if Dynamic
-  Peer_Type - If you define Peers, you need to specify one of the following types: "ipaddr" "keyid" "fqdn" "ufqdn"
-  Local_Peer1 - Primary Local peer parameter. E.g if you select ufqdn it would be something like ipsec@acme.com
-  Remote_Peer1 - Primary Remote peer parameter
-  Local_Peer2 - Secondary Local peer parameter
-  Remote_Peer2 - Secondary Remote peer parameter
-  Monitor_IP1 - If defined, turns on Monitoring and polls the IP address in the Primary IPSec Tunnel
-  Monitor_IP2 - If defined, turns on Monitoring and polls the IP address in the Primary IPSec Tunnel
-  BGP_AS - If defined will provision the BGP Peer AS
-  BGP_Local1 - If defiend will provision the Primary BGP Local IP - must be defined with the AS as a minimum to turn on BGP
-  BGP_Peer1 - If defined, Primary BGP Peer IP Address
-  BGP_Local2 - If defiend will provision the Secondary BGP Local IP
-  BGP_Peer2 - If defined, Secondary BGP Peer IP Address (currently needs intervention to select the flag in the portal)
-  Static_Route - Define a list of IP NetMasks for Static routes. Multiple addresses can be added with the delimeter of : between then. e.g. 192.168.1.0/24:192.168.2.0/24
-  Peer_Type - ,Local_Peer1,Remote_Peer1,Local_Peer2,Remote_Peer2,Monitor_IP1,Monitor_IP2,BGP_AS,BGP_Local1,BGP_Peer1,BGP_Local2,BGP_Peer2,Static_Route
+  * __Name__ - Remote Network Name
+  * __Compute_Region__ - Name of the Compute Region as stated in the Portal page
+  * __SPN__ - name of the Security Processing Node for the site. Bandwidth must be allocated to the Compute Region before provisoning
+  * __Dual_Tunnel__ - Set as True to configure the Secondary Tunnel as well
+  * __Tunnel_IP1__ - If the Tunnel is static, defined the Static IP address of the Primary Tunnel. Leave blank if Dynamic
+  * __Tunnel_IP2__ - If the Tunnel is static, defined the Static IP address of the Secondary Tunnel. Leave blank if Dynamic
+  * __Peer_Type__ - If you define Peers, you need to specify one of the following types: "ipaddr" "keyid" "fqdn" "ufqdn"
+  * __Local_Peer1__ - Primary Local peer parameter. E.g if you select ufqdn it would be something like ipsec@acme.com
+  * __Remote_Peer1__ - Primary Remote peer parameter
+  * __Local_Peer2__ - Secondary Local peer parameter
+  * __Remote_Peer2__ - Secondary Remote peer parameter
+  * __Monitor_IP1__ - If defined, turns on Monitoring and polls the IP address in the Primary IPSec Tunnel
+  * __Monitor_IP2__ - If defined, turns on Monitoring and polls the IP address in the Primary IPSec Tunnel
+  * __BGP_AS__ - If defined will provision the BGP Peer AS
+  * __BGP_Local1__ - If defiend will provision the Primary BGP Local IP - must be defined with the AS as a minimum to turn on BGP
+  * __BGP_Peer1__ - If defined, Primary BGP Peer IP Address
+  * __BGP_Local2__ - If defiend will provision the Secondary BGP Local IP
+  * __BGP_Peer2__ - If defined, Secondary BGP Peer IP Address (currently needs intervention to select the flag in the portal)
+  * __Static_Route__ - Define a list of IP NetMasks for Static routes. Multiple addresses can be added with the delimeter of : between then. e.g. 192.168.1.0/24:192.168.2.0/24
