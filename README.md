@@ -1,7 +1,7 @@
 # PACMAN-API-RNs
 
 ## Automatic provisioning of Remote Networks on Palo Alto Networks Prisma Cloud Managed ##
-NOTE: This does require the tenancy to be part of the SASE Portal
+NOTE: This requires that the tenancy to be part of the SASE Portal
 
 This Python3 script can simplify the deployment of a Remote Network configurations.
 
