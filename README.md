@@ -1,4 +1,4 @@
-# PACMAN-API-RNs
+# PaloAlto SASE-API-RNs
 
 ## Automatic provisioning of Remote Networks on Palo Alto Networks Prisma Cloud Managed ##
 NOTE: This requires that the tenancy to be part of the SASE Portal
